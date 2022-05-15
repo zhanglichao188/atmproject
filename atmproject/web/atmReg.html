@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登入页面</title>
+    <script>
+        function tijiao() {
+            if (document.getElementById("password_input").value!=document.getElementById("repassword_input").value) {
+                alert("两次密码不一致");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>欢迎注册ATM系统</h1>
+        <form action="regDemo" method="post" onsubmit="return tijiao();">
+            <table>
+                <tr>
+                    <td>姓名</td>
+                    <td><input type="text" id="username_input" name="atmName" value=""></td>
+                </tr>
+                <tr>
+                    <td>密码</td>
+                    <td><input type="password" id="password_input" name="atmPwd" value=""></td>
+                </tr>
+                <tr>
+                    <td>确认密码</td>
+                    <td><input type="password" id="repassword_input" name="reAtmPwd" value=""></td>
+                </tr>
+            </table>
+            <input type="submit" value="注册">
+        </form>
+    </center>
+</body>
+</html>
