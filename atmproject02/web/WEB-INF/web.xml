@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <!--login-->
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>com.bjpn.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/loginDemo.action</url-pattern>
+    </servlet-mapping>
+
+    <!--reg-->
+    <servlet>
+        <servlet-name>reg</servlet-name>
+        <servlet-class>com.bjpn.servlet.RegServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>reg</servlet-name>
+        <url-pattern>/regDemo.action</url-pattern>
+    </servlet-mapping>
+
+    <!--saveMoney-->
+    <servlet>
+        <servlet-name>saveMoney</servlet-name>
+        <servlet-class>com.bjpn.servlet.SaveMoneyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>saveMoney</servlet-name>
+        <url-pattern>/saveMoneyDemo.action</url-pattern>
+    </servlet-mapping>
+
+    <!--drawMoney-->
+    <servlet>
+        <servlet-name>drawMoney</servlet-name>
+        <servlet-class>com.bjpn.servlet.DrawMoneyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>drawMoney</servlet-name>
+        <url-pattern>/drawMoneyDemo.action</url-pattern>
+    </servlet-mapping>
+
+    <!--checkBalance-->
+    <servlet>
+        <servlet-name>checkBalance</servlet-name>
+        <servlet-class>com.bjpn.servlet.CheckBalanceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>checkBalance</servlet-name>
+        <url-pattern>/checkBalanceDemo.action</url-pattern>
+    </servlet-mapping>
+
+    <!--transfer-->
+    <servlet>
+        <servlet-name>transfer</servlet-name>
+        <servlet-class>com.bjpn.servlet.TransferServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>transfer</servlet-name>
+        <url-pattern>/transferDemo.action</url-pattern>
+    </servlet-mapping>
+</web-app>
