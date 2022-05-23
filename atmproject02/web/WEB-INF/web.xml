@@ -62,4 +62,23 @@
         <servlet-name>transfer</servlet-name>
         <url-pattern>/transferDemo.action</url-pattern>
     </servlet-mapping>
+    <!--编码过滤器-->
+    <filter>
+        <filter-name>encode</filter-name>
+        <filter-class>com.bjpn.filter.EncodFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>encode</filter-name>
+        <url-pattern>*.action</url-pattern>
+    </filter-mapping>
+
+    <!--登入验证过滤器-->
+    <filter>
+        <filter-name>loginCheck</filter-name>
+        <filter-class>com.bjpn.filter.LoginCheckFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>loginCheck</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>

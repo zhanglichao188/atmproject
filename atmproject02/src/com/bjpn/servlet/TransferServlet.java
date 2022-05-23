@@ -38,8 +38,10 @@ public class TransferServlet extends HttpServlet {
                 response.sendRedirect(path + "/transferFail.jsp");
             }
         } else {
-            session.setAttribute("transferResult", "这个卡号不存在");
-            response.sendRedirect(path+"/transferFail.jsp");
+            //session.setAttribute("transferResult", "这个卡号不存在");
+            request.setAttribute("transferResult", false);
+            //response.sendRedirect(path+"/transferFail.jsp");
+            request.getRequestDispatcher("transfer.jsp").forward(request, response);
         }
 
 

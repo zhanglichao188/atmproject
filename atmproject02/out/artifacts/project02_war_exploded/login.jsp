@@ -17,7 +17,7 @@
                 <td><input type="password" name="atmPwd" value="${cookie.atmPwd.value}"></td>
             </tr>
         </table>
-        <input type="checkbox" name="flag">记住密码
+        <input type="checkbox" name="flag" checked="checked">记住密码
         <input type="submit" value="登录">
         <a href="reg.jsp"><input type="button" value="注册"></a>
         <h1><font color="red">${result}</font></h1>

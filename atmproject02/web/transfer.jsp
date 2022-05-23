@@ -2,25 +2,27 @@
 <html>
 <head>
     <title>Title</title>
+    <script type="text/javascript" src="jquery-1.11.1.js"></script>
     <script>
+        $(function () {
+            if (${transferResult}===false) {
+                alert("输入的卡号不存在");
+            }
+        });
         function tijiao() {
-                var atmCode = document.getElementById("atmCode");
-                var atmCode2 = document.getElementById("atmCode2");
-                var jin=document.getElementById("jin");
-                var span=document.getElementById("transfer_span");
-                if ((atmCode.value==""||atmCode.value==null)||(atmCode2.value==""||atmCode2.value==null)) {
-                    alert("卡号不能为空，请输入卡号");
-                    return false;
-                }
-                if (atmCode.value!=atmCode2.value) {
-                    alert("两次卡号不一致，请重输！");
-                    return false;
-                }
-                if (jin.value==""||jin.value==null) {
-                    span.innerHTML="金额不能为空".fontcolor("red");
-                    return false;
-                }
-                return true;
+            if ($("#atmCode").val()==""||$("#atmCode2").val()=="") {
+                alert("卡号不能为空，请输入卡号");
+                return false;
+            }
+            if ($("#atmCode").val()!=$("#atmCode2").val()) {
+                alert("两次卡号不一致，请重输！");
+                return false;
+            }
+            if ($("#jin").val()=="") {
+                $("#transfer_span").html("<font color='red'>转账金额不能为空</font>");
+                return false;
+            }
+            return true;
         }
     </script>
 </head>
